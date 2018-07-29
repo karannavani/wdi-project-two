@@ -12,6 +12,8 @@ router.route('/posts')
 router.route('/posts/new')
   .get(postController.new);
 
+router.get('/posts/:id/edit', postController.edit);
+
 router.route('/posts/:id')
   .get(postController.show);
 

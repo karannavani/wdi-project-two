@@ -9,9 +9,8 @@ function postsIndex(req, res) {
 }
 
 function postsShow(req, res) {
-  const postId = req.params.id;
   Post
-    .findById(postId)
+    .findById(req.params.id)
     .then(post => res.render('posts/show', {post}));
 }
 
@@ -26,11 +25,19 @@ function postsCreate(req, res) {
     .catch(err => res.status(500).send(err));
 }
 
+function postsEdit(req, res) {
+  Post
+    .findById(req.params.id)
+    .then(post => res.render('posts/edit', {post}))
+    .catch(err => res.status(404).send(err));
+}
+
 
 
 module.exports = {
   index: postsIndex,
   show: postsShow,
   new: postsNew,
-  create: postsCreate
+  create: postsCreate,
+  edit: postsEdit
 };
