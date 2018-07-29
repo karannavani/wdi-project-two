@@ -10,3 +10,13 @@
 .subtitle {
   padding-top: 10px;
 }
+
+.author {
+  margin: 0px;
+  padding-top: 20px;
+}
+
+.date {
+  margin: 0;
+  padding: 0;
+}

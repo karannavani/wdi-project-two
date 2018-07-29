@@ -15,10 +15,22 @@ function postsShow(req, res) {
     .then(post => res.render('posts/show', {post}));
 }
 
+function postsNew(req ,res) {
+  res.render('posts/new');
+}
+
+function postsCreate(req, res) {
+  Post
+    .create(req.body)
+    .then(() => res.redirect('/posts'))
+    .catch(err => res.status(500).send(err));
+}
 
 
 
 module.exports = {
   index: postsIndex,
-  show: postsShow
+  show: postsShow,
+  new: postsNew,
+  create: postsCreate
 };
