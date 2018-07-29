@@ -1,8 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const postController = require('../controllers/postController');
+const registrationController = require('../controllers/registrationController');
 
 router.get('/', (req, res) => res.render('pages/_home'));
+
+router.get('/registrations/new', registrationController.new);
+router.post('/registrations', registrationController.create);
 
 router.route('/posts')
   .get(postController.index)
