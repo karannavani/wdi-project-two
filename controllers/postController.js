@@ -45,6 +45,13 @@ function postsUpdate(req ,res) {
     .catch(err => res.status(500).send(err));
 }
 
+function postsDelete(req, res) {
+  Post
+    .findByIdAndDelete(req.params.id)
+    .then(() => res.redirect('/posts'))
+    .catch(err => res.status(404).send(err));
+}
+
 
 
 module.exports = {
@@ -53,5 +60,6 @@ module.exports = {
   new: postsNew,
   create: postsCreate,
   edit: postsEdit,
-  update: postsUpdate
+  update: postsUpdate,
+  delete: postsDelete
 };
