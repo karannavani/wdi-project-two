@@ -10,6 +10,7 @@ router.get('/registrations/new', registrationController.new);
 router.post('/registrations', registrationController.create);
 
 router.get('/sessions/new', sessionController.new);
+router.post('/sessions', sessionController.create);
 
 router.route('/posts')
   .get(postController.index)
