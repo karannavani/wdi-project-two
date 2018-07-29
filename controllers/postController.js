@@ -19,6 +19,9 @@ function postsNew(req ,res) {
 }
 
 function postsCreate(req, res) {
+  if(req.body.tags) {
+    req.body.tags = req.body.tags.split('');
+  }
   Post
     .create(req.body)
     .then(() => res.redirect('/posts'))
@@ -32,6 +35,16 @@ function postsEdit(req, res) {
     .catch(err => res.status(404).send(err));
 }
 
+function postsUpdate(req ,res) {
+  if(req.body.tags) {
+    req.body.tags = req.body.tags.split('');
+  }
+  Post
+    .findByIdAndUpdate(req.params.id, req.body)
+    .then(post => res.redirect(`/posts/${post.id}`))
+    .catch(err => res.status(500).send(err));
+}
+
 
 
 module.exports = {
@@ -39,5 +52,6 @@ module.exports = {
   show: postsShow,
   new: postsNew,
   create: postsCreate,
-  edit: postsEdit
+  edit: postsEdit,
+  update: postsUpdate
 };

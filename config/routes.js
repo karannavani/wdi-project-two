@@ -15,6 +15,7 @@ router.route('/posts/new')
 router.get('/posts/:id/edit', postController.edit);
 
 router.route('/posts/:id')
-  .get(postController.show);
+  .get(postController.show)
+  .put(postController.update);
 
 module.exports = router;
