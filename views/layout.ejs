@@ -8,6 +8,15 @@
   </head>
   <body class="container">
       <% include ./partials/_header %>
+
+    <% for (const type in messages) { %>
+      <div class="message is <%= type %>">
+        <div class="message-body">
+          <%= messages[type] %>
+        </div>
+      </div>
+    <% } %>
+
       <%- body %>
   </body>
 </html>

@@ -11,6 +11,7 @@ router.post('/registrations', registrationController.create);
 
 router.get('/sessions/new', sessionController.new);
 router.post('/sessions', sessionController.create);
+router.get('/sessions/delete', sessionController.delete);
 
 router.route('/posts')
   .get(postController.index)

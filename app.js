@@ -51,6 +51,13 @@ app.use((req, res, next) => {
 
 app.use(flash());
 
+app.use((error, req, res, next) => {
+  if (error) {
+    return res.render(`errors/${error.status}`, {error});
+  }
+  return next();
+});
+
 // Routes
 const router = require('./config/routes');
 app.use(router);

@@ -10,9 +10,13 @@
         <a class="navbar-item" href="/">Home</a>
         <a class="navbar-item" href="/posts">Posts</a>
         <a class="navbar-item" href="/posts/new">New Post</a>
-        <a class="navbar-item" href="/registrations/new">Sign Up</a>
-        <a class="navbar-item" href="/sessions/new">Login</a>
         <a class="navbar-item" href="#">About</a>
+        <%  if (!locals.isLoggedIn) { %>
+          <a class="navbar-item" href="/registrations/new">Sign up!</a>
+          <a class="navbar-item" href="/sessions/new">Log in</a>
+          <%  } else { %>
+            <a class="navbar-item" href="/sessions/delete">Log out <%= locals.user.username %></a>
+            <%  } %>
       </div>
     </nav>
 

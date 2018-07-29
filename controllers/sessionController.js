@@ -17,7 +17,15 @@ function sessionsCreate(req, res) {
     });
 }
 
+function sessionsDelete(req, res) {
+  return req.session.regenerate(() => {
+    req.flash('info', 'You have been logged out');
+    res.redirect('/posts');
+  });
+}
+
 module.exports = {
   new: sessionsNew,
-  create: sessionsCreate
+  create: sessionsCreate,
+  delete: sessionsDelete
 };
