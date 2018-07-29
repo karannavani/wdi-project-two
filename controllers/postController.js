@@ -8,8 +8,17 @@ function postsIndex(req, res) {
     });
 }
 
+function postsShow(req, res) {
+  const postId = req.params.id;
+  Post
+    .findById(postId)
+    .then(post => res.render('posts/show', {post}));
+}
+
+
 
 
 module.exports = {
-  index: postsIndex
+  index: postsIndex,
+  show: postsShow
 };

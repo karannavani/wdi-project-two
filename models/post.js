@@ -7,6 +7,7 @@ const postSchema = new mongoose.Schema({
   date: {type: String},
   coverPic: {type: String},
   content: {type: String, required: true},
+  tags: [{type: String}],
   comments: [{ name: String, content: String }]
 });
 

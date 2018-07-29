@@ -1,9 +1,12 @@
 .logo {
-  width:100px;
+  width:96px;
   height:50px;
-  margin: 0 auto;
 }
 
 .header {
   padding-top: 15px;
+}
+
+.subtitle {
+  padding-top: 10px;
 }
