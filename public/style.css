@@ -1,6 +1,7 @@
 .footer {
-  padding: 5px 0;
+  margin: 0 !important;
 }
+
 
 .logo {
   width:96px;

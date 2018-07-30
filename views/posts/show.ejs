@@ -22,20 +22,20 @@
 
   <hr/>
   <% if (locals.isLoggedIn && user.username === post.author) { %>
-    <div class="column is-12">
-      <div class="section">
-        <div class="level">
-          <div class="level-left">
-            <a class="button is-warning" href="/posts/<%= post.id %>/edit">Edit</a>
-          </div>
-          <div class="level-right">
-            <form class="" action="/posts/<%= post.id %>" method="POST">
-              <button class="button is-danger">Delete</button>
-              <input type="hidden" name="_method" value="DELETE">
-            </form>
-          </div>
-        </div>
-      </div>
+    <div class="column is-10 is-multiline">
+    <a class="button is-warning" href="/posts/<%= post.id %>/edit">Edit</a>
     </div>
+
+    <div class="column is-10">
+    <form class="" action="/posts/<%= post.id %>" method="POST">
+    <button class="button is-danger">Delete</button>
+    <input type="hidden" name="_method" value="DELETE">
+    </form>
+    </div>
+
+
   <% } %>
+  <div class="column is-10">
+    <%- include('../comments/index', {post}) %>
+  </div>
 </div>

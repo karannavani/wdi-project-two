@@ -1,0 +1,15 @@
+<form class="" action="/posts/<%= post.id %>/comments" method="POST">
+
+  <div class="field">
+    <label for="content">Add a comment</label>
+    <textarea class="textarea" name="content" placeholder="E.g. Wow! This is great."></textarea>
+  </div>
+
+  <input type="hidden" name="createdBy" value="<%= locals.user.id %>">
+
+
+  <div class="field">
+    <button class="button is-info" name="button">Submit</button>
+  </div>
+
+</form>

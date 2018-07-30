@@ -3,6 +3,7 @@ const router = express.Router();
 const postController = require('../controllers/postController');
 const registrationController = require('../controllers/registrationController');
 const sessionController = require('../controllers/sessionController');
+const commentController = require('../controllers/commentController');
 
 function secureRoute(req, res, next) {
   if (!req.session.userId) {
@@ -37,5 +38,12 @@ router.route('/posts/:id')
   .get(postController.show)
   .put(postController.update)
   .delete(secureRoute, postController.delete);
+
+
+router.route('/posts/:postId/comments')
+  .post(secureRoute, commentController.create);
+
+router.route('/posts/:postId/comments/:commentId')
+  .delete(secureRoute, commentController.delete);
 
 module.exports = router;

@@ -1,0 +1,26 @@
+<% post.comments.forEach(comment => { %>
+  <div class="columns">
+    <div class="column is-6">
+      <p>
+        <span class="commenter">
+          <%= comment.createdBy.username %>:
+        </span>
+        <%= comment.content %>
+      </p>
+    </div>
+
+    <div class="column is-1">
+
+      <% if (locals.isLoggedIn && locals.user.username === comment.name) { %>
+        <form action="/posts/<%= post.id %>/comments/<%= comment.id %>" method="POST">
+          <input type="hidden" name="_method" value= "DELETE">
+          <button class="tag is-delete"></button>
+        </form>
+      <% } %>
+    </div>
+  </div>
+<% }) %>
+
+<% if (locals.isLoggedIn) { %>
+  <%- include('new', {post}) %>
+  <% } %>
