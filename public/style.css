@@ -29,5 +29,53 @@
 
 .title {
   font-family: 'Arapey', serif;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.01em;
+}
+
+.post-info {
+  width: 500px;
+}
+
+
+.post-info textarea {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  resize: none;
+}
+
+.post-info textarea:focus {
+  border: none;
+  box-shadow: none;
+  border-left: 1px solid grey;
+}
+
+.post-title {
+  font-size: 46px;
+  font-weight: bold;
+  padding: 5px;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.post-subtitle {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  padding-left: 5px;
+}
+
+
+.post-body textarea {
+  border: none;
+  box-shadow: none;
+  font-size: 20px;
+  margin: 0;
+  padding: 8px 0 0 5px;
+}
+
+.post-body textarea:focus {
+  border: none;
+  box-shadow: none;
 }
