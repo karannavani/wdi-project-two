@@ -7,17 +7,20 @@
   <div class="column">
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-menu">
-        <div class="navbar-end"></div>
-        <a class="navbar-item"><i class="fas fa-search"></i></a>
-        <a class="navbar-item" href="/posts">Home</a>
-        <a class="navbar-item" href="#">About</a>
-        <%  if (!locals.isLoggedIn) { %>
-          <a class="navbar-item" href="/registrations/new">Make your mark</a>
-          <a class="navbar-item" href="/sessions/new">Log in</a>
-          <%  } else { %>
-            <a class="navbar-item" href="/posts/new">New Post</a>
-            <a class="navbar-item" href="/sessions/delete">Log out <%= locals.user.username %></a>
-            <%  } %>
+        <div class="navbar-end">
+          <a class="navbar-item search"><input type="text" name="search" value=""></a>
+          <a class="navbar-item"><i class="fas fa-search"></i></a>
+          <%# <a class="navbar-item" href="/posts">Home</a>%>
+          <%# <a class="navbar-item" href="#">About</a>%>
+          <%  if (!locals.isLoggedIn) { %>
+            <a class="navbar-item" href="/registrations/new">Make your mark</a>
+            <a class="navbar-item" href="/sessions/new">Log in</a>
+            <%  } else { %>
+              <a class="navbar-item" href="/posts/new"><i class="fas fa-plus"></i></a>
+              <a class="navbar-item" href="/sessions/delete">Log out <%= locals.user.username %></a>
+              <%  } %>
+
+        </div>
       </div>
     </nav>
 

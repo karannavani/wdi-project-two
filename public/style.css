@@ -101,3 +101,24 @@
 .navbar {
   background-color: none;
 }
+
+.search {
+  box-shadow: none;
+  border: none;
+}
+
+.search input{
+  width: 100%;
+  border-radius: 15px;
+  border: 1px #000 solid;
+  padding: 5px 5px 5px 10px;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  box-shadow: none;
+}
+.search input:focus{
+  box-shadow: none;
+  outline-width: 0;
+
+}
