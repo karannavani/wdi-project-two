@@ -1,32 +1,26 @@
 <h2 class="title is-2">Edit</h2>
 
 <form method="POST" action="/posts/<%= post.id %>">
-  <div class="field">
-    <label class="label" for="author">Author</label>
-    <div class="control">
-      <input name="author" class="input" type="text" value="<%= post.author %>">
+
+  <div class="level-right">
+    <div class="level-item">
+      <button class="button is-success">Save</button>
     </div>
   </div>
-  <div class="field">
-    <label class="label" for="title">Title</label>
-    <div class="control">
-      <input name="title" class="input" type="text" value="<%= post.title %>">
-    </div>
+  
+  <div class="post-info">
+
+    <textarea name="title" class="textarea post-title" type="text" rows="1" placeholder="Title"><%=post.title %></textarea>
+    <textarea name="subtitle" class="textarea post-subtitle" type="text" rows="1" placeholder="Subtitle"><%=post.subtitle %></textarea>
+    <textarea name="coverPic" class="textarea post-coverpic" type="text" rows="1" placeholder="Image URL"><%=post.coverPic %></textarea>
+    <textarea name="tags" class="textarea post-tags" type="text" rows="1" placeholder="Tags (comma seperated)"><%=post.tags %></textarea>
+
   </div>
-  <div class="field">
-    <label class="label" for="subtitle">Subtitle</label>
-    <div class="control">
-      <input name="subtitle" class="input" type="text" value="<%= post.subtitle %>">
-    </div>
-  </div>
-  <div class="field">
-    <label class="label" for="content"></label>
-    <div class="control">
-      <textarea class="textarea" name="content"rows="30"><%= post.content %></textarea>
-    </div>
+
+  <div class="post-body">
+    <textarea class="textarea post-content" name="content" placeholder="Do some magic..." rows="30"><%=post.content %></textarea>
   </div>
 
   <input type="hidden" name="_method" value="PUT">
 
-  <button class="button is-primary">Save</button>
 </form>

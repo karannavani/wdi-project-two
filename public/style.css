@@ -2,7 +2,6 @@
   margin: 0 !important;
 }
 
-
 .logo {
   width:96px;
   height:50px;
@@ -38,7 +37,7 @@
 }
 
 .post-info {
-  width: 500px;
+  width: 100%;
 }
 
 .post-info textarea {
@@ -70,10 +69,15 @@
   padding: 0;
   padding-left: 5px;
 }
-.post-tags{
+
+.post-coverpic {
+  font-size: 20px;
   padding-left: 5px;
 }
 
+.post-tags{
+  padding-left: 5px;
+}
 
 .post-body textarea {
   border: none;
@@ -92,4 +96,8 @@
   white-space: pre-wrap;
   padding: 0;
   margin-top: -50px;
+}
+
+.navbar {
+  background-color: none;
 }

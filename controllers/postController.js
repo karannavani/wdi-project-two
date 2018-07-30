@@ -1,5 +1,4 @@
 const Post = require('../models/post');
-const User = require('../models/user');
 
 function postsIndex(req, res) {
   Post
@@ -34,7 +33,7 @@ function postsNew(req ,res) {
 
 function postsCreate(req, res) {
   if(req.body.tags) {
-    req.body.tags = req.body.tags.split('');
+    req.body.tags = req.body.tags.split(',');
   }
   Post
     .create(req.body)
@@ -51,7 +50,7 @@ function postsEdit(req, res) {
 
 function postsUpdate(req ,res) {
   if(req.body.tags) {
-    req.body.tags = req.body.tags.split('');
+    req.body.tags = req.body.tags.split(',');
   }
   Post
     .findByIdAndUpdate(req.params.id, req.body)
