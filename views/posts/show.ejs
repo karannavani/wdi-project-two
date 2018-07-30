@@ -21,7 +21,7 @@
   </div>
 
   <hr/>
-  <% if (locals.isLoggedIn) { %>
+  <% if (locals.isLoggedIn && user.username === post.author) { %>
     <div class="column is-12">
       <div class="section">
         <div class="level">
