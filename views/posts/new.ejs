@@ -1,19 +1,26 @@
 <form method="POST" action="/posts">
 
-  <div class="post-info">
-
-    <textarea name="title" class="textarea post-title" type="text" rows="1" placeholder="Title"></textarea>
-    <textarea name="subtitle" class="textarea post-subtitle" type="text" rows="1" placeholder="Subtitle"></textarea>
-
-    <input name="author" class="input" type="hidden" value="<%= locals.user.username %>">
-    <input name="date" class="input" type="hidden" value="<%= new Date().toLocaleString('en-gb', { month: 'short', day: '2-digit' }) %>">
-
+  <div class="level-right">
+      <div class="level-item">
+        <button class="button is-success">Publish</button>
+    </div>
   </div>
 
-  <div class="post-body">
-    <textarea class="textarea post-content" name="content" placeholder="Do some magic" rows="30"></textarea>
-  </div>
 
-  <button class="button is-success">Publish</button>
+<div class="post-info">
+
+  <textarea name="title" class="textarea post-title" type="text" rows="1" placeholder="Title"></textarea>
+  <textarea name="subtitle" class="textarea post-subtitle" type="text" rows="1" placeholder="Subtitle"></textarea>
+  <textarea name="tags" class="textarea post-tags" type="text" rows="1" placeholder="Tags (comma seperated)"></textarea>
+
+  <input name="author" class="input" type="hidden" value="<%= locals.user.username %>">
+  <input name="date" class="input" type="hidden" value="<%= new Date().toLocaleString('en-gb', { month: 'short', day: '2-digit' }) %>">
+
+</div>
+
+<div class="post-body">
+  <textarea class="textarea post-content" name="content" placeholder="Do some magic..." rows="30"></textarea>
+</div>
+
 
 </form>
