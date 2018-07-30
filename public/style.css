@@ -86,3 +86,9 @@
   border: none;
   box-shadow: none;
 }
+
+.content {
+  white-space: pre-wrap;
+  padding: 0;
+  margin-top: -50px;
+}
