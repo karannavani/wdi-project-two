@@ -1,4 +1,5 @@
 const Post = require('../models/post');
+const User = require('../models/user');
 
 function postsIndex(req, res) {
   Post
@@ -51,7 +52,6 @@ function postsDelete(req, res) {
     .then(() => res.redirect('/posts'))
     .catch(err => res.status(404).send(err));
 }
-
 
 
 module.exports = {

@@ -2,15 +2,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 mongoose.connect('mongodb://localhost/echo');
 
-let date;
-
-function createDate() {
-  const dateArr = Object.entries(Date());
-  const day = dateArr[4][1] + dateArr[5][1] + dateArr[6][1];
-  date = day + ' ' + new Date().getDate();
-}
-
-createDate();
+const date = new Date().toLocaleDateString('en-us', { month: 'short', day: '2-digit'});
 
 const Post = require('../models/post');
 

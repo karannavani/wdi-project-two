@@ -7,16 +7,27 @@
   padding-top: 15px;
 }
 
+.hidden {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
 .subtitle {
   padding-top: 10px;
 }
 
 .author {
-  margin: 0px;
+  margin: 0;
   padding-top: 20px;
 }
 
 .date {
   margin: 0;
   padding: 0;
+}
+
+.title {
+  font-family: 'Arapey', serif;
+  letter-spacing: 0.03em;
 }

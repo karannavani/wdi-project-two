@@ -4,7 +4,17 @@ const postController = require('../controllers/postController');
 const registrationController = require('../controllers/registrationController');
 const sessionController = require('../controllers/sessionController');
 
-router.get('/', (req, res) => res.render('pages/_home'));
+function secureRoute(req, res, next) {
+  if (!req.session.userId) {
+    return req.session.regenerate(() => {
+      req.flash('danger', 'You need to be logged in to be able to do that');
+      res.redirect('/sessions/new');
+    });
+  }
+  return next();
+}
+
+router.get('/', (req, res) => res.redirect('/posts'));
 
 router.get('/registrations/new', registrationController.new);
 router.post('/registrations', registrationController.create);
@@ -19,13 +29,13 @@ router.route('/posts')
 
 
 router.route('/posts/new')
-  .get(postController.new);
+  .get(secureRoute, postController.new);
 
 router.get('/posts/:id/edit', postController.edit);
 
 router.route('/posts/:id')
   .get(postController.show)
   .put(postController.update)
-  .delete(postController.delete);
+  .delete(secureRoute, postController.delete);
 
 module.exports = router;

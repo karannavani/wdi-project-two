@@ -1,20 +1,19 @@
 <div class="columns is-multiline header">
   <div class="column is-offset-5">
-    <img src="/images/logo.png" class="logo" alt="" width="">
+    <a href="/"><img src="/images/logo.png" class="logo" alt="Echo" width=""></a>
   </div>
 
   <div class="column">
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-menu">
         <div class="navbar-end"></div>
-        <a class="navbar-item" href="/">Home</a>
-        <a class="navbar-item" href="/posts">Posts</a>
-        <a class="navbar-item" href="/posts/new">New Post</a>
+        <a class="navbar-item" href="/posts">Home</a>
         <a class="navbar-item" href="#">About</a>
         <%  if (!locals.isLoggedIn) { %>
-          <a class="navbar-item" href="/registrations/new">Sign up!</a>
+          <a class="navbar-item" href="/registrations/new">Make your mark</a>
           <a class="navbar-item" href="/sessions/new">Log in</a>
           <%  } else { %>
+            <a class="navbar-item" href="/posts/new">New Post</a>
             <a class="navbar-item" href="/sessions/delete">Log out <%= locals.user.username %></a>
             <%  } %>
       </div>
