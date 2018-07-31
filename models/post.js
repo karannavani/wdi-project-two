@@ -9,7 +9,7 @@ const postSchema = new mongoose.Schema({
   content: { type: String, required: true },
   tags: [{ type: String }],
   comments: [{ createdBy: { type: mongoose.Schema.ObjectId, ref: 'User'}, content: String }],
-  likes: [{ type: Number, default: 0 }]
+  likes: [{ type: mongoose.Schema.ObjectId, ref: 'User' }]
 });
 
 

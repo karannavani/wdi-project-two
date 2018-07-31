@@ -4,6 +4,7 @@ const postController = require('../controllers/postController');
 const registrationController = require('../controllers/registrationController');
 const sessionController = require('../controllers/sessionController');
 const commentController = require('../controllers/commentController');
+const likeController = require('../controllers/likeController');
 
 function secureRoute(req, res, next) {
   if (!req.session.userId) {
@@ -24,10 +25,12 @@ router.get('/sessions/new', sessionController.new);
 router.post('/sessions', sessionController.create);
 router.get('/sessions/delete', sessionController.delete);
 
+
 router.route('/posts')
   .get(postController.index)
   .post(postController.create);
 
+router.post('/posts/:id/likes', likeController.create);
 
 router.route('/posts/new')
   .get(secureRoute, postController.new);

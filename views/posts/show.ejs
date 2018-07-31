@@ -15,6 +15,11 @@
           }) %>
         </p>
 
+        <form class="" action="/posts/<%= post.id %>/likes" method="POST">
+          <button class="like"><i class="far fa-heart fa-2x"></i></button>
+        </form>
+        <%= post.likes.length %>
+
         </div>
       </div>
       <div class="column is-8-desktop is-10-tablet is-12-mobile">

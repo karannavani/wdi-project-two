@@ -13,6 +13,10 @@
   color: #85144b
 }
 
+.fa-heart {
+  color: black;
+}
+
 .header {
   padding-top: 15px;
 }
@@ -127,4 +131,9 @@
 .search input:focus{
   box-shadow: none;
   outline-width: 0;
+}
+
+.like {
+  border: none;
+  background-color: none;
 }
