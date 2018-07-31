@@ -4,43 +4,48 @@
       <h1 class="title is-2"><%= post.title %> </h1>
       <h1 class="subtitle is-5"><%= post.subtitle %> </h1>
       <p class="subtitle is-6 read-time"><%= Math.round((post.content.split(' ').length)/275)%> minute read</p>
-      <h1 class="title is-5 author"><%= post.author%> </h1>
+      <h1 class="title is-5 author"><%= post.author.username %> </h1>
       <p class="subtitle is-6 date"><%= post.date%></p>
-      <p class="subtitle is-6 tags"><% post.tags.forEach(tag => { %>
-        <span class="tag"><%= tag %></span>
-        <% }) %>
-      </p>
-    </div>
-  </div>
-  <div class="column is-8-desktop is-10-tablet is-12-mobile">
-    <img src=<%= post.coverPic %> alt="">
-  </div>
-</div>
 
+      <p class="subtitle is-6 tags">
+        <% post.tags.forEach(tag => {
+          if (tag) {%>
+            <span class="tag"><%= tag %></span>
+          <% }
+          }) %>
+        </p>
 
-<div class="columns is-mobile is-centered is-multiline">
-  <div class="column is-12">
-    <div class="content">
-      <p><%= post.content %></p>
-    </div>
-  </div>
-
-  <hr/>
-  <% if (locals.isLoggedIn && user.username === post.author) { %>
-    <div class="column is-10 is-multiline">
-    <a class="button is-warning" href="/posts/<%= post.id %>/edit">Edit</a>
-    </div>
-
-    <div class="column is-10">
-    <form class="" action="/posts/<%= post.id %>" method="POST">
-    <button class="button is-danger">Delete</button>
-    <input type="hidden" name="_method" value="DELETE">
-    </form>
+        </div>
+      </div>
+      <div class="column is-8-desktop is-10-tablet is-12-mobile">
+        <img src=<%= post.coverPic %> alt="">
+      </div>
     </div>
 
 
-    <% } %>
-    <div class="column is-10">
-      <%- include('../comments/index', {post}) %>
-    </div>
-  </div>
+    <div class="columns is-mobile is-centered is-multiline">
+      <div class="column is-12">
+        <div class="content">
+          <p><%= post.content %></p>
+        </div>
+      </div>
+
+      <hr/>
+      <% if (locals.isLoggedIn && user.id === post.author.id) { %>
+        <div class="column is-10 is-multiline">
+        <a class="button is-warning" href="/posts/<%= post.id %>/edit">Edit</a>
+        </div>
+
+        <div class="column is-10">
+        <form class="" action="/posts/<%= post.id %>" method="POST">
+        <button class="button is-danger">Delete</button>
+        <input type="hidden" name="_method" value="DELETE">
+        </form>
+        </div>
+
+
+        <% } %>
+        <div class="column is-10">
+          <%- include('../comments/index', {post}) %>
+        </div>
+      </div>

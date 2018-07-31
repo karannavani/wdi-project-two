@@ -24,6 +24,7 @@ function postsShow(req, res) {
   Post
     .findById(req.params.id)
     .populate('comments.createdBy')
+    .populate('author')
     .then(post => res.render('posts/show', {post}));
 }
 
@@ -32,6 +33,8 @@ function postsNew(req ,res) {
 }
 
 function postsCreate(req, res) {
+  console.log(res.locals.userId);
+  req.body.author = req.session.userId;
   if(req.body.tags) {
     req.body.tags = req.body.tags.split(',');
   }

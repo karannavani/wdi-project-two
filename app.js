@@ -58,6 +58,8 @@ app.use((error, req, res, next) => {
   return next();
 });
 
+
+
 // Routes
 const router = require('./config/routes');
 app.use(router);

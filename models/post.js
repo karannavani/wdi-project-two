@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const postSchema = new mongoose.Schema({
   title: {type: String, required: true},
   subtitle: {type: String},
-  author: {type: String},
+  author: {type: mongoose.Schema.ObjectId, ref: 'User'},
   date: { type: String },
   coverPic: { type: String },
   content: { type: String, required: true },

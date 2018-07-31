@@ -1,10 +1,16 @@
 .footer {
   margin: 0 !important;
+  bottom: 0;
+  position: relative;
 }
 
 .logo {
   width:96px;
   height:50px;
+}
+
+.fas {
+  color: #85144b
 }
 
 .header {
@@ -117,8 +123,8 @@
   z-index: 5;
   box-shadow: none;
 }
+
 .search input:focus{
   box-shadow: none;
   outline-width: 0;
-
 }
