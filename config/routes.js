@@ -30,7 +30,12 @@ router.route('/posts')
   .get(postController.index)
   .post(postController.create);
 
-router.post('/posts/:id/likes', likeController.create);
+router.route('/posts/:id/likes')
+  .post(secureRoute, likeController.create);
+
+router.route('/posts/:id/likes/delete')
+  .delete(secureRoute, likeController.delete);
+
 
 router.route('/posts/new')
   .get(secureRoute, postController.new);

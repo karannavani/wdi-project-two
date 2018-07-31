@@ -137,3 +137,13 @@
   border: none;
   background-color: none;
 }
+
+.likes-number {
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+button:focus {
+  box-shadow: none;
+  outline-width: 0;
+}

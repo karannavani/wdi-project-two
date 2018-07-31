@@ -39,10 +39,11 @@ app.use(session({
 }));
 
 app.use((req, res, next) => {
-  if (!req.session.userId) return next();
+  if(!req.session.userId) return next();
   User
     .findById(req.session.userId)
     .then(user => {
+      // We are logged in
       res.locals.user = user;
       res.locals.isLoggedIn = true;
       next();

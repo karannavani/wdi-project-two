@@ -8,17 +8,6 @@ function postsIndex(req, res) {
     });
 }
 
-// function likePost(req, res, next) {
-//   Post
-//     .findById(req.params.id)
-//     .then(post => {
-//       post.likes += 1;
-//       return post.save();
-//     })
-//     .then(post => res.json(post))
-//     .catch(next);
-//
-// }
 
 function postsShow(req, res) {
   Post
