@@ -12,5 +12,7 @@ const postSchema = new mongoose.Schema({
   likes: [{ type: mongoose.Schema.ObjectId, ref: 'User' }]
 });
 
+postSchema.index({'$**': 'text'});
+
 
 module.exports = mongoose.model('Post', postSchema);

@@ -6,6 +6,7 @@ const sessionController = require('../controllers/sessionController');
 const commentController = require('../controllers/commentController');
 const likeController = require('../controllers/likeController');
 const userController = require('../controllers/userController');
+const searchController = require('../controllers/searchController');
 
 function secureRoute(req, res, next) {
   if (!req.session.userId) {
@@ -31,6 +32,7 @@ router.route('/users/:userId/show')
 
 
 router.route('/posts')
+// .get(postController.search);
   .get(postController.index)
   .post(postController.create);
 
@@ -39,6 +41,8 @@ router.route('/posts/:id/likes')
 
 router.route('/posts/:id/likes/delete')
   .delete(secureRoute, likeController.delete);
+
+router.post('/search', searchController.show);
 
 
 router.route('/posts/new')

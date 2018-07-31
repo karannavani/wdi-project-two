@@ -112,6 +112,11 @@
   background-color: none;
 }
 
+.search-button {
+  background-color: none;
+  border: 0;
+}
+
 .search {
   box-shadow: none;
   border: none;
