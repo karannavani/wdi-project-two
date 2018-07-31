@@ -17,6 +17,7 @@
             <a class="navbar-item" href="/sessions/new">Log in</a>
             <%  } else { %>
               <a class="navbar-item" href="/posts/new"><i class="fas fa-plus"></i></a>
+              <a class="navbar-item" href="/users/<%= locals.user.id %>/show">View profile </a>
               <a class="navbar-item" href="/sessions/delete">Log out <%= locals.user.username %></a>
               <%  } %>
 

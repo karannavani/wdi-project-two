@@ -5,6 +5,7 @@ const registrationController = require('../controllers/registrationController');
 const sessionController = require('../controllers/sessionController');
 const commentController = require('../controllers/commentController');
 const likeController = require('../controllers/likeController');
+const userController = require('../controllers/userController');
 
 function secureRoute(req, res, next) {
   if (!req.session.userId) {
@@ -24,6 +25,9 @@ router.post('/registrations', registrationController.create);
 router.get('/sessions/new', sessionController.new);
 router.post('/sessions', sessionController.create);
 router.get('/sessions/delete', sessionController.delete);
+
+router.route('/users/:userId/show')
+  .get(userController.show);
 
 
 router.route('/posts')
