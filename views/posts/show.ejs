@@ -58,11 +58,11 @@
 
           <hr/>
           <% if (locals.isLoggedIn && user.id === post.author.id) { %>
-            <div class="column is-10 is-multiline">
+            <div class="column is-12 is-multiline">
             <a class="button is-warning" href="/posts/<%= post.id %>/edit">Edit</a>
             </div>
 
-            <div class="column is-10">
+            <div class="column is-12">
             <form class="" action="/posts/<%= post.id %>" method="POST">
             <button class="button is-danger">Delete</button>
             <input type="hidden" name="_method" value="DELETE">
@@ -71,7 +71,7 @@
 
 
             <% } %>
-            <div class="column is-10">
+            <div class="column is-12">
               <%- include('../comments/index', {post}) %>
             </div>
           </div>
