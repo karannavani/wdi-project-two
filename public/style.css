@@ -3,19 +3,23 @@
 }
 
 .card {
-  font-family: 'Varela', sans-serif !important;
+  font-family: 'Varela', sans-serif;
+  -webkit-box-shadow: -2px 14px 103px -4px rgba(0,0,0,0.54);
+  -moz-box-shadow: -2px 14px 103px -4px rgba(0,0,0,0.54);
+  box-shadow: -2px 14px 103px -4px rgba(0,0,0,0.54);
+
 }
 
 .card-title, .card-subtitle {
 
-  font-family: 'Varela', sans-serif !important;
+  font-family: 'Varela', sans-serif;
   color: white;
 }
 
 .card-title {
   text-transform: uppercase;
   letter-spacing: 0.1em !important;
-  font-weight: 800;
+  font-weight: 400 !important;
 }
 
 .card-img {
@@ -23,6 +27,9 @@
   -moz-box-shadow: 15px 52px 103px -4px rgba(0,0,0,0.60);
   box-shadow: 15px 52px 103px -4px rgba(0,0,0,0.60);
 
+}
+.for-you {
+  font-size: 30px;
 }
 
 .footer {
@@ -48,6 +55,13 @@
   padding-top: 15px;
 }
 
+.heading {
+  font-family: 'Varela', sans-serif;
+  font-size: 2.7em;
+  font-weight: 1000;
+  letter-spacing: 0.3em;
+}
+
 .hidden {
   visibility: hidden;
   height: 0;
@@ -69,8 +83,8 @@
 }
 
 .title {
-  font-family: 'Arapey', serif;
-  letter-spacing: 0.01em;
+  font-family: 'Varela', sans-serif;
+  font-size: 40px !important;
 }
 
 .post-info {
