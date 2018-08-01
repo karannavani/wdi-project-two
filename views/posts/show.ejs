@@ -3,9 +3,9 @@
     <div>
       <h1 class="title is-2"><%= post.title %> </h1>
       <h1 class="subtitle is-5"><%= post.subtitle %> </h1>
-      <p class="subtitle is-6 read-time"><%= Math.round((post.content.split(' ').length)/275)%> minute read</p>
-      <h1 class="title is-5 author"><%= post.author.username %> </h1>
-      <p class="subtitle is-6 date"><%= post.date%></p>
+      <p class="subtitle read-time"><i class="far fa-clock"></i> <%= Math.round((post.content.split(' ').length)/275)%> minute read</p>
+      <h1 class="subtitle is-5 author">By <%= post.author.username %></h1>
+      <p class="subtitle is-6 date">on <%= post.date%></p>
 
       <p class="subtitle is-6 tags">
         <% post.tags.forEach(tag => {
