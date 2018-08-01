@@ -14,7 +14,7 @@
   <textarea name="coverPic" class="textarea post-coverpic" type="text" rows="1" placeholder="Image URL"></textarea>
   <textarea name="tags" class="textarea post-tags" type="text" rows="1" placeholder="Tags (comma seperated)"></textarea>
 
-  <input name="date" class="input" type="hidden" value="<%= new Date().toLocaleString('en-gb', { month: 'short', day: '2-digit' }) %>">
+  <input name="date" class="input" type="hidden" value="<%= new Date().toLocaleString('en-gb', { month: 'short', day: '2-digit', year: 'numeric' }) %>">
 
 </div>
 

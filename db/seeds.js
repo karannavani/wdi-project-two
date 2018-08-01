@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 mongoose.connect('mongodb://localhost/echo');
 
-const date = new Date().toLocaleDateString('en-us', { month: 'short', day: '2-digit'});
+const date = new Date().toLocaleDateString('en-us', { month: 'short', day: '2-digit', year: 'numeric'});
 
 const Post = require('../models/post');
 const User = require('../models/user');
