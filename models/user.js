@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const Post = require('../models/post');
 
 const userSchema = new mongoose.Schema({
   username: {type: String, required: true, unique: true},
@@ -16,6 +17,9 @@ userSchema.virtual('passwordConfirmation')
     this._passwordConfirmation = passwordConfirmation;
   });
 
+userSchema.methods.postsAuthored = function() {
+  return Post.find({ author: this.id});
+};
 
 userSchema.pre('validate', function(next) {
   if (this._passwordConfirmation !== this.password) {

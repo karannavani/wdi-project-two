@@ -138,6 +138,10 @@
   outline-width: 0;
 }
 
+.search-result {
+  padding-bottom: 25px;
+}
+
 .like {
   border: none;
   background-color: none;

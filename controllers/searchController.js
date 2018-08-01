@@ -1,14 +1,15 @@
 const Post = require('../models/post');
 
-function searchShow(req, res) {
+function searchIndex(req, res) {
   Post
     .find({$text: {$search: req.body.search}})
+    .populate('author')
     .then(post => {
       console.log(req.body);
-      res.render('search/show', {post});
+      res.render('search/index', {post});
     });
 }
 
 module.exports = {
-  show: searchShow
+  index: searchIndex
 };

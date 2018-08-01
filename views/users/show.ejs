@@ -1,7 +1,7 @@
 <h1 class="title is-1"><%= user.username %></h1>
 <h1 class="title is-2">Published posts</h1>
-<% let index = -1;
-user.stories.forEach(title => {
-index++ %>
-<a href="/posts/<%=user.storyLinks[index]%>"><h1 class="title is-1"><%= title %></h1></a>
+
+<% postsAuthored.forEach(post => { %>
+<a href="/posts/<%= post.id %>"><h1 class="title is-1"><%= post.title %></h1>
 <% }) %>
+</a>

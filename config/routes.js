@@ -42,7 +42,7 @@ router.route('/posts/:id/likes')
 router.route('/posts/:id/likes/delete')
   .delete(secureRoute, likeController.delete);
 
-router.post('/search', searchController.show);
+router.post('/search', searchController.index);
 
 
 router.route('/posts/new')
