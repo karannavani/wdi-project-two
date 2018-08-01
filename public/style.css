@@ -2,12 +2,20 @@
   margin-bottom: 10px;
 }
 
-.title-card {
-
+.card {
+  font-family: 'Varela', sans-serif !important;
 }
 
 .card-title, .card-subtitle {
+
+  font-family: 'Varela', sans-serif !important;
   color: white;
+}
+
+.card-title {
+  text-transform: uppercase;
+  letter-spacing: 0.1em !important;
+  font-weight: 800;
 }
 
 .card-img {
