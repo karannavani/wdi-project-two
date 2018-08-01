@@ -5,11 +5,11 @@
     <h1 class="heading">Featured</h1>
     <div class="card">
       <div class="title-card card-content" style="background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);">
-          <a href=/posts/<%= posts[0].id %>>
-            <h2 class= "card-title title is-3"><%- posts[0].title %></h2>
-            <h3 class= "card-subtitle subtitle is-6"><%- posts[0].subtitle %></h3>
-            <img class="card-img" src=<%= posts[0].coverPic %> alt=<%= posts[0].title %> />
-          </a>
+        <a href=/posts/<%= posts[0].id %>>
+          <h2 class= "card-title title is-3"><%- posts[0].title %></h2>
+          <h3 class= "card-subtitle subtitle is-6"><%- posts[0].subtitle %></h3>
+          <img class="card-img" src=<%= posts[0].coverPic %> alt=<%= posts[0].title %> />
+        </a>
       </div>
     </div>
   </div>
@@ -22,21 +22,40 @@
       mainIndex++ %>
       <% if (mainIndex < 4 && mainIndex > 0) { %>
         <div class="card">
-          <div class="card-content" style="background: linear-gradient(90deg, #d53369 0%, #daae51 100%);">
-            <a href=/posts/<%= post.id %>>
-            <div class='columns is-multiline'>
-            <div class="column is-7"><h2 class= "for-you card-title"><%- post.title %></h2></div>
-            <div class="column is-5"><img width="200px" class="card-img" src='<%= post.coverPic %>'></div>
-            </div>
-            </a>
-          </div>
+        <div class="card-content" style="background: linear-gradient(90deg, #d53369 0%, #daae51 100%);">
+        <a href=/posts/<%= post.id %>>
+        <div class='columns is-multiline'>
+        <div class="column is-7"><h2 class= "for-you card-title"><%- post.title %></h2></div>
+        <div class="column is-5"><img width="200px" class="card-img" src='<%= post.coverPic %>'></div>
+        </div>
+        </a>
+        </div>
         </div>
         <%  } %>
         <%  }) %>
       </div>
-      </div>
+    </div>
 
+    <hr>
+    <h1 class="heading">Trending</h1>
+    <div class="columns is-multiline">
+      <% let index = -1;
+      posts.forEach(post => {
+        index++ %>
+        <% if (index > 3) { %>
+          <div class= "column is-6">
+          <div class="card secondary-card" style="background: linear-gradient(90deg, #3D9970 0%, #000851 100%);">
+          <div class="card-content" >
+          <a href=/posts/<%= post.id %>>
+          <div class='columns is-multiline'>
+          <div class="column is-7"><h2 class= "for-you card-title"><%- post.title %></h2><p class="card-subtitle"><%- post.subtitle %></p></div>
+          <div class="column is-5"><img width="200px" class="card-img" src='<%= post.coverPic %>'></div>
+          </div>
+          </a>
+          </div>
+          </div>
+          </div>
+          <%  } %>
+          <%  }) %>
 
-
-      <hr>
-      <h1 class="heading">Trending</h1>
+        </div>

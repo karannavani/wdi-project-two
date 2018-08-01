@@ -1,13 +1,15 @@
-.card-content {
-  margin-bottom: 10px;
-}
 
 .card {
   font-family: 'Varela', sans-serif;
   -webkit-box-shadow: -2px 14px 103px -4px rgba(0,0,0,0.54);
   -moz-box-shadow: -2px 14px 103px -4px rgba(0,0,0,0.54);
   box-shadow: -2px 14px 103px -4px rgba(0,0,0,0.54);
+  margin-bottom: 25px;
+}
 
+.secondary-card {
+  height: 200px;
+  margin-bottom: -10px;
 }
 
 .card-title, .card-subtitle {
@@ -20,6 +22,10 @@
   text-transform: uppercase;
   letter-spacing: 0.1em !important;
   font-weight: 400 !important;
+}
+
+.card-subtitle {
+  color: white;
 }
 
 .card-img {
