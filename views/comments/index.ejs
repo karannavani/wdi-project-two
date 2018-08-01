@@ -11,7 +11,7 @@
 
     <div class="column is-1">
 
-      <% if (locals.isLoggedIn && locals.user.username === comment.name) { %>
+      <% if (locals.isLoggedIn && locals.user.username === comment.createdBy.username) { %>
         <form action="/posts/<%= post.id %>/comments/<%= comment.id %>" method="POST">
           <input type="hidden" name="_method" value= "DELETE">
           <button class="tag is-delete"></button>

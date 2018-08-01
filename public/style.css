@@ -5,6 +5,11 @@
   -moz-box-shadow: -2px 14px 103px -4px rgba(0,0,0,0.54);
   box-shadow: -2px 14px 103px -4px rgba(0,0,0,0.54);
   margin-bottom: 25px;
+  border-radius: 10px !important;
+}
+
+.card-content {
+  border-radius: 10px !important;
 }
 
 .secondary-card {
@@ -29,9 +34,10 @@
 }
 
 .card-img {
-  -webkit-box-shadow: 15px 52px 103px -4px rgba(0,0,0,0.60);
-  -moz-box-shadow: 15px 52px 103px -4px rgba(0,0,0,0.60);
-  box-shadow: 15px 52px 103px -4px rgba(0,0,0,0.60);
+  -webkit-box-shadow: 9px 13px 65px -1px rgba(0,0,0,0.57);
+  -moz-box-shadow: 9px 13px 65px -1px rgba(0,0,0,0.57);
+  box-shadow: 9px 13px 65px -1px rgba(0,0,0,0.57);
+  Copy Text
 
 }
 .for-you {
