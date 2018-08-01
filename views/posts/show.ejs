@@ -25,7 +25,6 @@
                   }) %>
                 </p>
 
-
             <% if (locals.isLoggedIn) { %>
               <% if (post.likes.indexOf(locals.user.id.toString()) >= 0) { %>
                 <form class="" action="/posts/<%= post.id %>/likes/delete" method="POST">

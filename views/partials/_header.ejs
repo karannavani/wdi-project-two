@@ -1,31 +1,34 @@
-<div class="columns is-multiline header is-mobile">
-  <div class="column is-offset-5">
-    <a href="/"><img src="/images/logonew.png" class="logo" alt="Echo" width=""></a>
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="images/logonew.png" alt="Echo" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
   </div>
 
+  <div class="navbar-menu">
+    <div class="navbar-end">
+      <form class="navbar-item" action="/search" method="POST">
+      <a class="navbar-it
+      em search"><input type="text" name="search" value=""></a>
+      <button class="navbar-item search-button"><i class="fas fa-search fa-lg"></i></button>
+    </form>
+      <%# <a class="navbar-item" href="/posts">Home</a>%>
+      <%# <a class="navbar-item" href="#">About</a>%>
+      <%  if (!locals.isLoggedIn) { %>
+        <a class="navbar-item" href="/registrations/new">Sign up</a>
+        <a class="navbar-item" href="/sessions/new">Log in</a>
+        <%  } else { %>
+          <a class="navbar-item" href="/posts/new"><i class="fas fa-plus"></i></a>
+          <a class="navbar-item" href="/users/<%= locals.user.id %>/show">View profile </a>
+          <a class="navbar-item" href="/sessions/delete">Log out <%= locals.user.username %></a>
+          <%  } %>
 
-  <div class="column">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-menu">
-        <div class="navbar-end">
-          <form class="navbar-item" action="/search" method="POST">
-          <a class="navbar-item search"><input type="text" name="search" value=""></a>
-          <button class="navbar-item search-button"><i class="fas fa-search fa-lg"></i></button>
-        </form>
-          <%# <a class="navbar-item" href="/posts">Home</a>%>
-          <%# <a class="navbar-item" href="#">About</a>%>
-          <%  if (!locals.isLoggedIn) { %>
-            <a class="navbar-item" href="/registrations/new">Sign up</a>
-            <a class="navbar-item" href="/sessions/new">Log in</a>
-            <%  } else { %>
-              <a class="navbar-item" href="/posts/new"><i class="fas fa-plus"></i></a>
-              <a class="navbar-item" href="/users/<%= locals.user.id %>/show">View profile </a>
-              <a class="navbar-item" href="/sessions/delete">Log out <%= locals.user.username %></a>
-              <%  } %>
-
-        </div>
-      </div>
-    </nav>
-
+    </div>
   </div>
-</div>
+</nav>

@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
     <link rel="stylesheet" href="/style.css">
+    <script src="external.js" charset="utf-8"></script>
   </head>
-  <body class="container">
-      <% include ./partials/_header %>
-
+  
+  <body>
+    <% include ./partials/_header %>
+    <div class="container">
     <% for (const type in messages) { %>
       <div class="message is <%= type %>">
         <div class="message-body">
@@ -22,6 +24,7 @@
     <% } %>
 
       <%- body %>
+      </div>
       <% include ./partials/_footer %>
   </body>
 </html>
