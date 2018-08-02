@@ -16,6 +16,32 @@
   border-radius: 10px !important;
 }
 
+.button-col {
+  padding: 0;
+}
+
+.button-col:first-child {
+  margin-left: 10px;
+}
+
+.button-col :hover {
+  color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.06);
+}
+
+.edit-button, .delete-button {
+  color: white;
+  margin: 0;
+}
+
+.edit-button {
+  background: #001f3f;
+}
+
+.delete-button {
+  background: #85144b;
+}
+
 .secondary-card {
   padding: 0;
   margin-bottom: 0;

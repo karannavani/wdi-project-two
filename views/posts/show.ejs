@@ -72,23 +72,23 @@
             </div>
           </div>
             </div>
-          <hr/>
 
           <% if (locals.isLoggedIn && user.id === post.author.id) { %>
             <div class="columns is-12-desktop">
-            <div class="column is-1">
-            <a class="button is-warning" href="/posts/<%= post.id %>/edit">Edit</a>
+            <div class="button-col column is-1">
+            <a class="edit-button button" href="/posts/<%= post.id %>/edit">Edit</a>
             </div>
-            <div class="column is-1">
+            <div class="button-col column is-1">
             <form class="" action="/posts/<%= post.id %>" method="POST">
-            <button class="button is-danger">Delete</button>
+            <button class="delete-button button">Delete</button>
             <input type="hidden" name="_method" value="DELETE">
             </form>
             </div>
             </div>
-
-
             <% } %>
+            <hr/>
+
+
             <div class="columns is-12-desktop">
             <div class="column">
               <h1 class="title is-1">Comments</h1>
