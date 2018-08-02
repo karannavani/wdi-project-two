@@ -33,6 +33,7 @@
           document.body.style.backgroundColor = "#282C34";
           document.body.style.color = "white";
           navbar.style.backgroundColor = "#21252B";
+          document.querySelector('.navbar-menu').style.backgroundColor = "#21252B";
           document.querySelector('.logo').src = "/images/white-logo.png";
           if (blogCard) {
             blogCard.style.background = "linear-gradient(to right, #000000, #434343)";
@@ -48,6 +49,7 @@
           });
           document.querySelectorAll('.navbar-item').forEach(item => {
           item.style.color = "white"
+          item.classList.toggle('night');
           });
           if (likesNumber) {
             likesNumber.style.color = "white";
@@ -59,6 +61,7 @@
           document.body.style.color = "#494949";
           navbar.style.backgroundColor = "#F5F5F5";
           document.querySelector('.logo').src = "/images/logonew.png";
+          document.querySelector('.navbar-menu').style.backgroundColor = "#F5F5F5";
           if (blogCard) {
           blogCard.style.background = "linear-gradient(to bottom, #eef2f3, #ece9e6)";
           }
@@ -72,6 +75,7 @@
           });
           document.querySelectorAll('.navbar-item').forEach(item => {
           item.style.color = "inherit"
+          item.classList.toggle('night');
           });
           if (likesNumber) {
             likesNumber.style.color = "inherit";

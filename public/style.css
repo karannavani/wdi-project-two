@@ -285,6 +285,10 @@ button:focus {
   margin-top: 30px;
 }
 
+.night:hover {
+  background: grey !important;
+}
+
 @media screen and (max-width: 760px) {
   .container {
     padding: 20px;
