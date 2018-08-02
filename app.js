@@ -21,6 +21,7 @@ app.use(expressLayouts);
 // Static files
 app.use(express.static(`${__dirname}/public`));
 
+
 // Middleware
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: true}));

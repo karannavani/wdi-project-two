@@ -1,6 +1,6 @@
 <div class="columns is-mobile is-multiline is-centered">
 
-  <div class="column is-5">
+  <div class="column is-5-desktop is-12-mobile">
     <div>
       <div class="main-details">
         <div class="blog-card card">
@@ -58,7 +58,7 @@
 
             </div>
           </div>
-          <div class="column">
+          <div class="column is-10-mobile">
             <img src=<%= post.coverPic %> alt="">
           </div>
 
@@ -66,15 +66,16 @@
 
 
         <div class="columns is-mobile is-centered is-multiline">
-          <div class="column is-12">
+          <div class="column is-12-desktop is-10-mobile">
             <div class="content">
               <p><%= post.content %></p>
             </div>
           </div>
 
           <hr/>
+
           <% if (locals.isLoggedIn && user.id === post.author.id) { %>
-            <div class="column is-12 is-multiline">
+            <div class="column is-12-desktop is-10-mobile is-multiline">
             <a class="button is-warning" href="/posts/<%= post.id %>/edit">Edit</a>
             </div>
 
@@ -84,10 +85,10 @@
             <input type="hidden" name="_method" value="DELETE">
             </form>
             </div>
-
-
             <% } %>
-            <div class="column is-12">
+
+            <div class="column is-12-desktop is-10-mobile">
               <%- include('../comments/index', {post}) %>
             </div>
+
           </div>

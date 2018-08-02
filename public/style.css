@@ -17,8 +17,14 @@
 }
 
 .secondary-card {
+  padding: 0;
+  margin-bottom: 0;
   height: 200px;
-  margin-bottom: -10px;
+}
+
+.secondary-card .card-title {
+  font-size: 20px;
+  margin-bottom: 7px;
 }
 
 .card-title, .card-subtitle {
@@ -49,7 +55,7 @@
 }
 
 .footer {
-  margin: 0 !important;
+  margin-top: 50px !important;
   bottom: 0;
   position: relative;
 }
@@ -237,4 +243,15 @@ button:focus {
 
 .blog-card:hover {
   transform: none;
+}
+
+.container {
+  padding: 10px;
+}
+
+@media screen and (max-width: 760px) {
+  .container {
+    padding: 20px;
+  }
+
 }
