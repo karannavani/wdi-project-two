@@ -3,7 +3,7 @@
     <div class="column is-10">
       <p>
         <span class="commenter">
-          <strong><%= comment.createdBy.username %>:</strong>
+          <a href="/users/<%= comment.createdBy.id%>/show"><strong><%= comment.createdBy.username %>:</strong></a>
         </span>
         <%= comment.content %>
       </p>

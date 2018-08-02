@@ -11,7 +11,7 @@
               <h1 class="blog-subtitle subtitle is-5"><%= post.subtitle %> </h1>
             </div>
             <div class="column is-6">
-              <h1 class="subtitle is-5 author">By <%= post.author.username %></h1>
+            <a href="/users/<%= post.author.id%>/show"><h1 class="subtitle is-5 author">By <%= post.author.username %></h1></a> 
               <p class="subtitle is-6 date">on <%= post.date%></p>
               <p class="read-time"><i class="far fa-clock"></i> <%= Math.round((post.content.split(' ').length)/275)%> minute read</p>
             </div>

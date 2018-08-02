@@ -4,6 +4,7 @@ const Post = require('../models/post');
 
 const userSchema = new mongoose.Schema({
   username: {type: String, required: true, unique: true},
+  profilePic: {type: String},
   email: {type: String, required: true},
   password: {type: String, required: true}
 });
