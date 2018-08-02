@@ -27,12 +27,14 @@ User
   },
   {
     username: 'Steve Jobs',
+    profilePic: 'images/steve.jpg',
     email: 'steve@apple.com',
     password: 'pass',
     passwordConfirmation: 'pass'
   },
   {
     username: 'Warren Buffett',
+    profilePic: 'images/warren.jpg',
     email: 'warren@buffett.com',
     password: 'pass',
     passwordConfirmation: 'pass'
