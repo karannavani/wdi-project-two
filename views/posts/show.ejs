@@ -8,12 +8,12 @@
             <div class="columns is-mobile is-multiline">
             <div class="column is-12">
               <h1 class="blog-title"><%= post.title %> </h1>
-              <h1 class="subtitle is-5"><%= post.subtitle %> </h1>
+              <h1 class="blog-subtitle subtitle is-5"><%= post.subtitle %> </h1>
             </div>
             <div class="column is-6">
               <h1 class="subtitle is-5 author">By <%= post.author.username %></h1>
               <p class="subtitle is-6 date">on <%= post.date%></p>
-              <p class="subtitle read-time"><i class="far fa-clock"></i> <%= Math.round((post.content.split(' ').length)/275)%> minute read</p>
+              <p class="read-time"><i class="far fa-clock"></i> <%= Math.round((post.content.split(' ').length)/275)%> minute read</p>
             </div>
             <div class="column is-6">
 
@@ -71,24 +71,27 @@
               <p><%= post.content %></p>
             </div>
           </div>
-
+            </div>
           <hr/>
 
           <% if (locals.isLoggedIn && user.id === post.author.id) { %>
-            <div class="column is-12-desktop is-10-mobile is-multiline">
+            <div class="columns is-12-desktop">
+            <div class="column is-1">
             <a class="button is-warning" href="/posts/<%= post.id %>/edit">Edit</a>
             </div>
-
-            <div class="column is-12">
+            <div class="column is-1">
             <form class="" action="/posts/<%= post.id %>" method="POST">
             <button class="button is-danger">Delete</button>
             <input type="hidden" name="_method" value="DELETE">
             </form>
             </div>
-            <% } %>
-
-            <div class="column is-12-desktop is-10-mobile">
-              <%- include('../comments/index', {post}) %>
             </div>
 
-          </div>
+
+            <% } %>
+            <div class="columns is-12-desktop">
+            <div class="column">
+              <h1 class="title is-1">Comments</h1>
+              <%- include('../comments/index', {post}) %>
+            </div>
+            </div>

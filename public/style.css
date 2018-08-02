@@ -30,7 +30,7 @@
 .card-title, .card-subtitle {
 
   font-family: 'Varela', sans-serif;
-  color: white;
+  color: white !important;
 }
 
 .card-title {

@@ -20,6 +20,7 @@
       const navbarMenu = document.querySelector('.navbar-menu');
       const navbar = document.querySelector('.navbar');
       const nightMode = document.querySelector('.night-mode');
+      const blogCard = document.querySelector('.blog-card');
 
       navbarBurgers.addEventListener('click', () => {
         navbarBurgers.classList.toggle('is-active');
@@ -30,12 +31,33 @@
         if (!nightToggle) {
           document.body.style.backgroundColor = "#282C34";
           document.body.style.color = "white";
-          navbar.style.backgroundColor = "#21252B"
+          navbar.style.backgroundColor = "#21252B";
+          if (blogCard) {
+            blogCard.style.background = "linear-gradient(to right, #000000, #434343)";
+          }
+          document.querySelector('.card-content').style.color = "white";
+          document.querySelector('.subtitle').style.color = "white";
+          document.querySelector('p').style.color = "white";
+          document.querySelectorAll('h1').forEach(header => {
+          header.style.color = "white"
+          });
           nightToggle = true;
-        } else {
+
+        } else if (nightToggle) {
           document.body.style.backgroundColor = "white";
           document.body.style.color = "#494949";
-          navbar.style.backgroundColor = "#F5F5F5"
+          navbar.style.backgroundColor = "#F5F5F5";
+          if (blogCard) {
+          blogCard.style.background = "linear-gradient(to bottom, #eef2f3, #ece9e6)";
+          }
+          document.querySelector('.card-content').style.color = "inherit";
+          document.querySelector('.subtitle').style.color = "inherit";
+          document.querySelector('p').style.color = "inherit";
+          document.querySelectorAll('h1').forEach(header => {
+          header.style.color = "inherit";
+          });
+
+
           nightToggle = false;
         }
       })
