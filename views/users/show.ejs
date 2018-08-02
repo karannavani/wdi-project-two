@@ -1,10 +1,28 @@
-<figure class="image is-128x128">
-  <img src="/<%= user.profilePic %>" alt="">
-</figure>
-<h1 class="title is-1"><%= user.username %></h1>
-<h1 class="title is-2">Published posts</h1>
 
-<% postsAuthored.forEach(post => { %>
-<a href="/posts/<%= post.id %>"><h1 class="title is-1"><%= post.title %></h1>
-<% }) %>
-</a>
+<div class="columns is-mobile is-multiline">
+  <div class="column is-12">
+
+    <figure class="image is-128x128">
+      <img src="/<%= user.profilePic %>" alt="">
+    </figure>
+    <h1 class="title"><%= user.username %></h1>
+    Following: 0
+    Followers: 0
+    Liked posts: 0
+
+  </div>
+  <div class="column is-6">
+    <h1 class="title">Published posts</h1>
+    <% postsAuthored.forEach(post => { %>
+      <a href="/posts/<%= post.id %>"><h1 class="post-list"><%= post.title %></h1>
+      <% }) %>
+    </a>
+  </div>
+
+
+
+
+
+
+
+</div>
