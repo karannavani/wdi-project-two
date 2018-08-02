@@ -9,16 +9,40 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
     <link rel="stylesheet" href="/style.css">
-    <script charset="utf-8">document.addEventListener('DOMContentLoaded', () => {
+    <script charset="utf-8">
+
+    let nightToggle = false;
+
+      document.addEventListener('DOMContentLoaded', () => {
 
       // Get all "navbar-burger" elements
       const navbarBurgers = document.querySelector('.navbar-burger');
       const navbarMenu = document.querySelector('.navbar-menu');
+      const navbar = document.querySelector('.navbar');
+      const nightMode = document.querySelector('.night-mode');
 
       navbarBurgers.addEventListener('click', () => {
         navbarBurgers.classList.toggle('is-active');
         navbarMenu.classList.toggle('is-active');
       });
+
+      nightMode.addEventListener('click', () => {
+        if (!nightToggle) {
+          document.body.style.backgroundColor = "#282C34";
+          document.body.style.color = "white";
+          navbar.style.backgroundColor = "#21252B"
+          nightToggle = true;
+        } else {
+          document.body.style.backgroundColor = "white";
+          document.body.style.color = "#494949";
+          navbar.style.backgroundColor = "#F5F5F5"
+          nightToggle = false;
+        }
+      })
+      // nightMode.addEventListener('touchstart', () => {
+      //   document.body.style.backgroundColor = "#282C34";
+      //   nightToggle = true;
+      // })
 
     });
 </script>

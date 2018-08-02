@@ -183,10 +183,12 @@
   background-color: none;
 }
 
-.search-button {
+.search-button, .night-mode {
+  background: none;
   background-color: none;
   border: 0;
 }
+
 
 .search {
   box-shadow: none;
