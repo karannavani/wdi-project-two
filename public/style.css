@@ -18,11 +18,16 @@
 
 .button-col {
   padding: 0;
-}
-
-.button-col:first-child {
   margin-left: 10px;
 }
+
+.is-delete {
+  border: none;
+  background: #85144b !important;
+  color: white !important;
+}
+
+
 
 .button-col :hover {
   color: rgba(255, 255, 255, 0.8);
