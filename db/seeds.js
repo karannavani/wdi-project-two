@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const {DB_URI} = require('../config/environment');
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost/echo');
+mongoose.connect(DB_URI);
 
 const date = new Date().toLocaleDateString('en-us', { month: 'short', day: '2-digit', year: 'numeric'});
 
