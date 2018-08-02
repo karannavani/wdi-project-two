@@ -285,7 +285,6 @@ button:focus {
 .post-list {
   font-size: 30px;
   font-family: 'Varela', sans-serif;
-  letter-spacing: 0.07em;
 }
 
 @media screen and (max-width: 760px) {
