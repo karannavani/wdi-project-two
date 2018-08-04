@@ -51,7 +51,7 @@ I kicked off the project by setting up my Trello board which served as the base 
 
 	[![](https://thumbs.gfycat.com/IncomparableUnripeKittiwake-size_restricted.gif)](https://gfycat.com/gifs/detail/IncomparableUnripeKittiwake)
 
-	[![](https://thumbs.gfycat.com/ForthrightBothBumblebee-size_restricted.gif)(https://gfycat.com/gifs/detail/ForthrightBothBumblebee)
+[![](https://thumbs.gfycat.com/ForthrightBothBumblebee-size_restricted.gif)(https://gfycat.com/gifs/detail/ForthrightBothBumblebee)
 
 
 ### Bonus Features
