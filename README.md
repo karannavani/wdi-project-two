@@ -50,8 +50,9 @@ I kicked off the project by setting up my Trello board which served as the base 
 5. **Night mode** – Being a night owl, I read a lot at night and very few websites are optimised to support this. This is why I implemented a toggle which optimises the website for reading in the dark.
 
 	[![](https://thumbs.gfycat.com/IncomparableUnripeKittiwake-size_restricted.gif)](https://gfycat.com/gifs/detail/IncomparableUnripeKittiwake)
-	
+<p align="center">	
 	[![](https://thumbs.gfycat.com/ForthrightBothBumblebee-size_restricted.gif)](https://gfycat.com/gifs/detail/ForthrightBothBumblebee)
+</p>
 
 ### Bonus Features
 
