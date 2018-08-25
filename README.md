@@ -3,7 +3,7 @@
 > **[Visit Echo](https://echo-platform.herokuapp.com/)**
 
 # Goal
-To create a blogging platform which includes user authentication and RESTful routes.
+To create a blogging platform which includes user authentication and RESTful routes (in 6 days).
 
 # Technologies Used
 * HTML5
