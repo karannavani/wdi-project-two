@@ -24,16 +24,15 @@ To create a blogging platform which includes user authentication and RESTful rou
 # Approach Taken
 I kicked off the project by setting up my Trello board which served as the base for planning and prioritising actions.
 
-![](https://i.imgur.com/nkDBA73.jpg)
+<p align="center"><img src="https://i.imgur.com/nkDBA73.jpg"></p>
 
 ### Wireframing
-![](https://i.imgur.com/Aeg2WNM.png)
-![](https://i.imgur.com/x7Yoa9U.png)
-
+<p align="center"><img src="https://i.imgur.com/Aeg2WNM.png"></p>
+<p align="center"><img src="https://i.imgur.com/x7Yoa9U.png"></p>
 
 ### Result
 
-[![](https://thumbs.gfycat.com/PhysicalUnhappyJanenschia-size_restricted.gif)](https://gfycat.com/gifs/detail/PhysicalUnhappyJanenschia)
+<p align="center"><img src="https://thumbs.gfycat.com/PhysicalUnhappyJanenschia-size_restricted.gif"></p>
 
 ### Core functionality
 
@@ -45,13 +44,12 @@ I kicked off the project by setting up my Trello board which served as the base 
  
 4. **Search** – I implemented the search functionality using MongoDB's Indexing ability. This allows the user to search for any string or number in the database.
 
-![](https://i.imgur.com/9hpFPp2.png)
+<p align="center"><img src="https://i.imgur.com/9hpFPp2.png"></p>
 
 5. **Night mode** – Being a night owl, I read a lot at night and very few websites are optimised to support this. This is why I implemented a toggle which optimises the website for reading in the dark.
 
-	[![](https://thumbs.gfycat.com/IncomparableUnripeKittiwake-size_restricted.gif)](https://gfycat.com/gifs/detail/IncomparableUnripeKittiwake)
-	
-	[![](https://thumbs.gfycat.com/ForthrightBothBumblebee-size_restricted.gif)](https://gfycat.com/gifs/detail/ForthrightBothBumblebee)
+<p align="center"><img src="https://thumbs.gfycat.com/IncomparableUnripeKittiwake-size_restricted.gif"></p>
+<p align="center"><img src="https://thumbs.gfycat.com/ForthrightBothBumblebee-size_restricted.gif"></p>
 
 ### Bonus Features
 
@@ -74,7 +72,7 @@ After implementing the core functionality I had in mind, I decided to implement 
 
 	I focused on big bold cards which focused on quality and personalisation. I topped off the experience by adding subtle animations which helped bring the web app to life.
 	
-[![](https://thumbs.gfycat.com/ReflectingUnrealisticBarnacle-size_restricted.gif)](https://gfycat.com/gifs/detail/ReflectingUnrealisticBarnacle)
+<p align="center"><img src="https://thumbs.gfycat.com/ReflectingUnrealisticBarnacle-size_restricted.gif"></p>
  
 ---
 # Blockers
