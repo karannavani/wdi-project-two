@@ -15,8 +15,6 @@ To create a blogging platform which includes user authentication and RESTful rou
 * Express
 * EJS
 * Heroku
-* Github
-* Git
 * Bulma
 
 
